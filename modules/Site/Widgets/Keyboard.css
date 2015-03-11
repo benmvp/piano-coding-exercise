@@ -1,0 +1,42 @@
+.Keyboard {
+	display:inline-block;
+	height:300px;
+	position:relative;
+	width:450px;
+}
+.Keyboard-major {
+	display:block;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;	
+}
+.Keyboard-major {
+	display:flex;
+	justify-content:space-between;
+	
+}
+.Keyboard-cSharp,
+.Keyboard-dSharp,
+.Keyboard-fSharp,
+.Keyboard-gSharp,
+.Keyboard-aSharp {
+	position:absolute;
+}
+
+.Keyboard-cSharp {
+	left:40px;
+}
+.Keyboard-dSharp {
+	left:106px;
+}
+.Keyboard-fSharp {
+	left:234px;	
+}
+.Keyboard-gSharp {
+	left:300px;	
+}
+.Keyboard-aSharp {
+	left:366px;
+}

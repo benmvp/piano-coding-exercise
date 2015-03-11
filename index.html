@@ -1,15 +1,70 @@
 <html>
 	<head>
 		<title>Piano Coding Exercise</title>
+		
+		<link rel="stylesheet" type="text/css" href="modules/Site/Widgets/Key.css" />
+		<link rel="stylesheet" type="text/css" href="modules/Site/Widgets/Keyboard.css" />
 		<link rel="stylesheet" type="text/css" href="index.css" />
 	</head>
 	<body id="page">
+		
+		<div id="page_keyboard">
+			<div class="Keyboard-board">
+				<div class="Keyboard-major">
+					<div id="page_keyboard_c">
+						<label id="page_keyboard_c-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_d">
+						<label id="page_keyboard_d-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_e">
+						<label id="page_keyboard_e-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_f">
+						<label id="page_keyboard_f-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_g">
+						<label id="page_keyboard_g-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_a">
+						<label id="page_keyboard_a-label" class="Key-label"></label>
+					</div>
+					<div id="page_keyboard_b">
+						<label id="page_keyboard_b-label" class="Key-label"></label>
+					</div>
+				</div>
+				
+				<div id="page_keyboard_cSharp">
+					<label id="page_keyboard_cSharp-label" class="Key-label"></label>
+				</div>
+				<div id="page_keyboard_dSharp">
+					<label id="page_keyboard_dSharp-label" class="Key-label"></label>
+				</div>
+				<div id="page_keyboard_fSharp">
+					<label id="page_keyboard_fSharp-label" class="Key-label"></label>
+				</div>
+				<div id="page_keyboard_gSharp">
+					<label id="page_keyboard_gSharp-label" class="Key-label"></label>
+				</div>
+				<div id="page_keyboard_aSharp">
+					<label id="page_keyboard_aSharp-label" class="Key-label"></label>
+				</div>
+			</div>
+			
+			<div class="Keyboard-logShell">
+				<label class="Keyboard-logLabel">Log:</label>
+				<div class="Keyboard-log"></div>
+			</div>
+		</div>
+	
+	
 		<script type="text/javascript" src="modules/Uize.js"></script>
 		<script type="text/javascript" language="javascript">
+			Uize.addFolderOrgNamespaces('Site');
 			Uize.module({
-				required:'Uize.Widget.Page',
+				required:'Site.Widgets.Page',
 				builder:function() {
-					(window.page = Uize.Widget.Page()).wireUi();
+					(window.page = Site.Widgets.Page()).wireUi();
 				}
 			});
 		</script>
