@@ -16,7 +16,9 @@
 	width:100%;	
 }
 .Keyboard-major {
+		display:-webkit-flex;
 	display:flex;
+		-webkit-justify-content:space-between;
 	justify-content:space-between;
 	
 }
@@ -44,13 +46,20 @@
 	left:366px;
 }
 
-.Keyboard-logShell {
+.Keyboard-logShell,
+.Keyboard-inputShell {
+		-webkit-align-items:center;
+	align-items:center;
+		display:-webkit-flex;
 	display:flex;
+		-webkit-justify-content:space-between;
 	justify-content:space-between;
 	margin-top:1em;
+	width:450px;
 }
 .Keyboard-log {
 	background:#ddd;
+		-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	font:1.5em monospace;
 	height:3.5em;
@@ -73,4 +82,13 @@
 .Keyboard-button:hover,
 .Keyboard-button:active {
 	background:#ffa128;
+}
+.Keyboard-button:active {
+	box-shadow:inset -5px -5px 5px 0 rgba(0,0,0,.75);
+}
+
+.Keyboard-input {
+	font:1.5em monospace;
+	height:3.5em;	
+	width:calc(100% - 100px);
 }

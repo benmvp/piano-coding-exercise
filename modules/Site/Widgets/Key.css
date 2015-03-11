@@ -2,14 +2,12 @@
 	border:3px solid black;
 	border-radius:0 0 10px 10px;
 	border-top:none;
+		-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	cursor:pointer;
 	display:inline-block;
 	position:relative;
 	transition:background .25s;
-}
-.Key:hover {
-	background:#4ba4f2;
 }
 .Key-major {
 	background:#fff;
@@ -22,6 +20,15 @@
 	height:65%;
 	width:45px;
 }
+.Key:hover,
+.Key:active,
+.Key-playing {
+	background:#4ba4f2;
+}
+.Key:active,
+.Key-playing {
+	box-shadow:inset -5px -5px 5px 0 rgba(0,0,0,.75);
+}
 .Key-label {
 	bottom:.5em;
 	color:#676767;
@@ -33,7 +40,8 @@
 	transition:color .25s;
 	width:100%;
 }
-.Key:hover .Key-label {
+.Key:hover .Key-label,
+.Key-playing .Key-label {
 	color:#eee;
 }
 .Key-minor .Key-label {
@@ -41,6 +49,7 @@
 	opacity:0;
 	transition:opacity .25s;
 }
-.Key-minor:hover .Key-label {
+.Key-minor:hover .Key-label,
+.Key-minor.Key-playing .Key-label {
 	opacity:1;
 }
