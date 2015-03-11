@@ -74,7 +74,7 @@ Uize.module ({
 					'#play:click':function() {
 						var
 							children = this.children,
-							keys = this.getNodeValue('input').split(/\s*,\s*/),
+							keys = this.getNodeValue('input').split(/\s*,\s*/), // retrieve keys by getting value of text area and splitting it on comma
 							keyNo = -1,
 							playKey = function() {
 								// stop playing previous key

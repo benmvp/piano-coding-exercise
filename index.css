@@ -2,3 +2,9 @@ body {
 	font-size:100%;	
 	line-height:1.125em;
 }
+.page-keyboard {
+	margin:0 5em 5em 0;	
+}
+.page-keyboard:last-child: {
+	margin:0;	
+}

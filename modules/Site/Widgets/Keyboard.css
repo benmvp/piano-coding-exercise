@@ -8,19 +8,15 @@
 	width:450px;
 }
 .Keyboard-major {
-	display:block;
+		display:-webkit-flex;
+	display:flex;
 	height:100%;
 	left:0;
+		-webkit-justify-content:space-between;
+	justify-content:space-between;
 	position:absolute;
 	top:0;
 	width:100%;	
-}
-.Keyboard-major {
-		display:-webkit-flex;
-	display:flex;
-		-webkit-justify-content:space-between;
-	justify-content:space-between;
-	
 }
 .Keyboard-cSharp,
 .Keyboard-dSharp,

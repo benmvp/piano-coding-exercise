@@ -8,61 +8,174 @@
 	</head>
 	<body id="page">
 		
-		<div id="page_keyboard" class="Keyboard">
-			<div class="Keyboard-board">
-				<div class="Keyboard-major">
-					<div id="page_keyboard_c" class="Key Key-major">
-						<label id="page_keyboard_c-label" class="Key-label">C</label>
+		<div class="keyboards">
+		
+			<div id="page_keyboard" class="Keyboard page-keyboard">
+				<div class="Keyboard-board">
+					<div class="Keyboard-major">
+						<div id="page_keyboard_c" class="Key Key-major">
+							<label id="page_keyboard_c-label" class="Key-label">C</label>
+						</div>
+						<div id="page_keyboard_d" class="Key Key-major">
+							<label id="page_keyboard_d-label" class="Key-label">D</label>
+						</div>
+						<div id="page_keyboard_e" class="Key Key-major">
+							<label id="page_keyboard_e-label" class="Key-label">E</label>
+						</div>
+						<div id="page_keyboard_f" class="Key Key-major">
+							<label id="page_keyboard_f-label" class="Key-label">F</label>
+						</div>
+						<div id="page_keyboard_g" class="Key Key-major">
+							<label id="page_keyboard_g-label" class="Key-label">G</label>
+						</div>
+						<div id="page_keyboard_a" class="Key Key-major">
+							<label id="page_keyboard_a-label" class="Key-label">A</label>
+						</div>
+						<div id="page_keyboard_b" class="Key Key-major">
+							<label id="page_keyboard_b-label" class="Key-label">B</label>
+						</div>
 					</div>
-					<div id="page_keyboard_d" class="Key Key-major">
-						<label id="page_keyboard_d-label" class="Key-label">D</label>
+					
+					<div id="page_keyboard_cSharp" class="Key Key-minor Keyboard-cSharp">
+						<label id="page_keyboard_cSharp-label" class="Key-label">C#</label>
 					</div>
-					<div id="page_keyboard_e" class="Key Key-major">
-						<label id="page_keyboard_e-label" class="Key-label">E</label>
+					<div id="page_keyboard_dSharp" class="Key Key-minor Keyboard-dSharp">
+						<label id="page_keyboard_dSharp-label" class="Key-label">D#</label>
 					</div>
-					<div id="page_keyboard_f" class="Key Key-major">
-						<label id="page_keyboard_f-label" class="Key-label">F</label>
+					<div id="page_keyboard_fSharp" class="Key Key-minor Keyboard-fSharp">
+						<label id="page_keyboard_fSharp-label" class="Key-label">F#</label>
 					</div>
-					<div id="page_keyboard_g" class="Key Key-major">
-						<label id="page_keyboard_g-label" class="Key-label">G</label>
+					<div id="page_keyboard_gSharp" class="Key Key-minor Keyboard-gSharp">
+						<label id="page_keyboard_gSharp-label" class="Key-label">G#</label>
 					</div>
-					<div id="page_keyboard_a" class="Key Key-major">
-						<label id="page_keyboard_a-label" class="Key-label">A</label>
-					</div>
-					<div id="page_keyboard_b" class="Key Key-major">
-						<label id="page_keyboard_b-label" class="Key-label">B</label>
+					<div id="page_keyboard_aSharp" class="Key Key-minor Keyboard-aSharp">
+						<label id="page_keyboard_aSharp-label" class="Key-label">A#</label>
 					</div>
 				</div>
 				
-				<div id="page_keyboard_cSharp" class="Key Key-minor Keyboard-cSharp">
-					<label id="page_keyboard_cSharp-label" class="Key-label">C#</label>
+				<div class="Keyboard-logShell">
+					<label class="Keyboard-logLabel">Log:</label>
+					<div id="page_keyboard-log" class="Keyboard-log"></div>
+					<button id="page_keyboard-clear" class="Keyboard-button Keyboard-clear">Clear</button>
 				</div>
-				<div id="page_keyboard_dSharp" class="Key Key-minor Keyboard-dSharp">
-					<label id="page_keyboard_dSharp-label" class="Key-label">D#</label>
-				</div>
-				<div id="page_keyboard_fSharp" class="Key Key-minor Keyboard-fSharp">
-					<label id="page_keyboard_fSharp-label" class="Key-label">F#</label>
-				</div>
-				<div id="page_keyboard_gSharp" class="Key Key-minor Keyboard-gSharp">
-					<label id="page_keyboard_gSharp-label" class="Key-label">G#</label>
-				</div>
-				<div id="page_keyboard_aSharp" class="Key Key-minor Keyboard-aSharp">
-					<label id="page_keyboard_aSharp-label" class="Key-label">A#</label>
+				
+				<div class="Keyboard-inputShell">
+					<textarea id="page_keyboard-input" class="Keyboard-input" placeholder="Enter keys comma-separated for playback"></textarea>
+					<button id="page_keyboard-play" class="Keyboard-button Keyboard-play">Play</button>
 				</div>
 			</div>
 			
-			<div class="Keyboard-logShell">
-				<label class="Keyboard-logLabel">Log:</label>
-				<div id="page_keyboard-log" class="Keyboard-log"></div>
-				<button id="page_keyboard-clear" class="Keyboard-button Keyboard-clear">Clear</button>
+			<div id="page_keyboard2" class="Keyboard page-keyboard">
+				<div class="Keyboard-board">
+					<div class="Keyboard-major">
+						<div id="page_keyboard2_c" class="Key Key-major">
+							<label id="page_keyboard2_c-label" class="Key-label">C</label>
+						</div>
+						<div id="page_keyboard2_d" class="Key Key-major">
+							<label id="page_keyboard2_d-label" class="Key-label">D</label>
+						</div>
+						<div id="page_keyboard2_e" class="Key Key-major">
+							<label id="page_keyboard2_e-label" class="Key-label">E</label>
+						</div>
+						<div id="page_keyboard2_f" class="Key Key-major">
+							<label id="page_keyboard2_f-label" class="Key-label">F</label>
+						</div>
+						<div id="page_keyboard2_g" class="Key Key-major">
+							<label id="page_keyboard2_g-label" class="Key-label">G</label>
+						</div>
+						<div id="page_keyboard2_a" class="Key Key-major">
+							<label id="page_keyboard2_a-label" class="Key-label">A</label>
+						</div>
+						<div id="page_keyboard2_b" class="Key Key-major">
+							<label id="page_keyboard2_b-label" class="Key-label">B</label>
+						</div>
+					</div>
+					
+					<div id="page_keyboard2_cSharp" class="Key Key-minor Keyboard-cSharp">
+						<label id="page_keyboard2_cSharp-label" class="Key-label">C#</label>
+					</div>
+					<div id="page_keyboard2_dSharp" class="Key Key-minor Keyboard-dSharp">
+						<label id="page_keyboard2_dSharp-label" class="Key-label">D#</label>
+					</div>
+					<div id="page_keyboard2_fSharp" class="Key Key-minor Keyboard-fSharp">
+						<label id="page_keyboard2_fSharp-label" class="Key-label">F#</label>
+					</div>
+					<div id="page_keyboard2_gSharp" class="Key Key-minor Keyboard-gSharp">
+						<label id="page_keyboard2_gSharp-label" class="Key-label">G#</label>
+					</div>
+					<div id="page_keyboard2_aSharp" class="Key Key-minor Keyboard-aSharp">
+						<label id="page_keyboard2_aSharp-label" class="Key-label">A#</label>
+					</div>
+				</div>
+				
+				<div class="Keyboard-logShell">
+					<label class="Keyboard-logLabel">Log:</label>
+					<div id="page_keyboard2-log" class="Keyboard-log"></div>
+					<button id="page_keyboard2-clear" class="Keyboard-button Keyboard-clear">Clear</button>
+				</div>
+				
+				<div class="Keyboard-inputShell">
+					<textarea id="page_keyboard2-input" class="Keyboard-input" placeholder="Enter keys comma-separated for playback"></textarea>
+					<button id="page_keyboard2-play" class="Keyboard-button Keyboard-play">Play</button>
+				</div>
 			</div>
 			
-			<div class="Keyboard-inputShell">
-				<textarea id="page_keyboard-input" class="Keyboard-input"></textarea>
-				<button id="page_keyboard-play" class="Keyboard-button Keyboard-play">Play</button>
+			<div id="page_keyboard3" class="Keyboard page-keyboard">
+				<div class="Keyboard-board">
+					<div class="Keyboard-major">
+						<div id="page_keyboard3_c" class="Key Key-major">
+							<label id="page_keyboard3_c-label" class="Key-label">C</label>
+						</div>
+						<div id="page_keyboard3_d" class="Key Key-major">
+							<label id="page_keyboard3_d-label" class="Key-label">D</label>
+						</div>
+						<div id="page_keyboard3_e" class="Key Key-major">
+							<label id="page_keyboard3_e-label" class="Key-label">E</label>
+						</div>
+						<div id="page_keyboard3_f" class="Key Key-major">
+							<label id="page_keyboard3_f-label" class="Key-label">F</label>
+						</div>
+						<div id="page_keyboard3_g" class="Key Key-major">
+							<label id="page_keyboard3_g-label" class="Key-label">G</label>
+						</div>
+						<div id="page_keyboard3_a" class="Key Key-major">
+							<label id="page_keyboard3_a-label" class="Key-label">A</label>
+						</div>
+						<div id="page_keyboard3_b" class="Key Key-major">
+							<label id="page_keyboard3_b-label" class="Key-label">B</label>
+						</div>
+					</div>
+					
+					<div id="page_keyboard3_cSharp" class="Key Key-minor Keyboard-cSharp">
+						<label id="page_keyboard3_cSharp-label" class="Key-label">C#</label>
+					</div>
+					<div id="page_keyboard3_dSharp" class="Key Key-minor Keyboard-dSharp">
+						<label id="page_keyboard3_dSharp-label" class="Key-label">D#</label>
+					</div>
+					<div id="page_keyboard3_fSharp" class="Key Key-minor Keyboard-fSharp">
+						<label id="page_keyboard3_fSharp-label" class="Key-label">F#</label>
+					</div>
+					<div id="page_keyboard3_gSharp" class="Key Key-minor Keyboard-gSharp">
+						<label id="page_keyboard3_gSharp-label" class="Key-label">G#</label>
+					</div>
+					<div id="page_keyboard3_aSharp" class="Key Key-minor Keyboard-aSharp">
+						<label id="page_keyboard3_aSharp-label" class="Key-label">A#</label>
+					</div>
+				</div>
+				
+				<div class="Keyboard-logShell">
+					<label class="Keyboard-logLabel">Log:</label>
+					<div id="page_keyboard3-log" class="Keyboard-log"></div>
+					<button id="page_keyboard3-clear" class="Keyboard-button Keyboard-clear">Clear</button>
+				</div>
+				
+				<div class="Keyboard-inputShell">
+					<textarea id="page_keyboard3-input" class="Keyboard-input" placeholder="Enter keys comma-separated for playback"></textarea>
+					<button id="page_keyboard3-play" class="Keyboard-button Keyboard-play">Play</button>
+				</div>
 			</div>
+			
 		</div>
-	
 	
 		<script type="text/javascript" src="modules/Uize.js"></script>
 		<script type="text/javascript" language="javascript">
