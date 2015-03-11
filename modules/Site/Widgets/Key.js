@@ -18,6 +18,10 @@ Uize.module ({
 			
 			htmlBindings:{
 				key:'label'	
+			},
+			
+			eventBindings:{
+				'#:click':function() { this.fire('Click') }	
 			}
 		});
 	}

@@ -3,18 +3,18 @@
 	border-radius:0 0 10px 10px;
 	border-top:none;
 	box-sizing:border-box;
+	cursor:pointer;
 	display:inline-block;
 	position:relative;
+	transition:background .25s;
+}
+.Key:hover {
+	background:#4ba4f2;
 }
 .Key-major {
 	background:#fff;
-	cursor:pointer;
 	height:100%;
 	width:60px;
-	transition:background .25s;
-}
-.Key-major:hover {
-	background:#4ba4f2;
 }
 .Key-minor {
 	background:#000;
@@ -25,6 +25,7 @@
 .Key-label {
 	bottom:.5em;
 	color:#676767;
+	cursor:pointer;
 	font:3em sans-serif;
 	left:0;
 	position:absolute;
@@ -32,9 +33,14 @@
 	transition:color .25s;
 	width:100%;
 }
-.Key-major:hover .Key-label {
+.Key:hover .Key-label {
 	color:#eee;
 }
 .Key-minor .Key-label {
-	display:none;
+	font-size:1.5em;
+	opacity:0;
+	transition:opacity .25s;
+}
+.Key-minor:hover .Key-label {
+	opacity:1;
 }

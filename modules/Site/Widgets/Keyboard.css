@@ -1,5 +1,8 @@
 .Keyboard {
 	display:inline-block;
+}
+
+.Keyboard-board {
 	height:300px;
 	position:relative;
 	width:450px;
@@ -39,4 +42,35 @@
 }
 .Keyboard-aSharp {
 	left:366px;
+}
+
+.Keyboard-logShell {
+	display:flex;
+	justify-content:space-between;
+	margin-top:1em;
+}
+.Keyboard-log {
+	background:#ddd;
+	box-sizing:border-box;
+	font:1.5em monospace;
+	height:3.5em;
+	overflow:auto;
+	padding:.5em;
+	width:calc(100% - 150px);
+}
+
+.Keyboard-button {
+	background:#4ba4f2;
+	border:transparent;
+	border-radius:5em;
+	color:#fff;
+	cursor:pointer;
+	font:small-caps 1.5em sans-serif;
+	padding:.5em;
+	outline:none;
+	transition:background .25s;
+}
+.Keyboard-button:hover,
+.Keyboard-button:active {
+	background:#ffa128;
 }
