@@ -7,8 +7,28 @@ Uize.module ({
 		
 		var
 			majorKeys = ['c', 'd', 'e', 'f', 'g', 'a', 'b'],
+			flatKeyLookup = {
+				dFlat:'cSharp',
+				eFlat:'dSharp',
+				gFlat:'fSharp',
+				aFlat:'gSharp',
+				bFlat:'aSharp'
+			},
 			minorKeys = ['cSharp', 'dSharp', 'fSharp', 'gSharp', 'aSharp'],
-			allKeys = majorKeys.concat(minorKeys)
+			allKeys = majorKeys.concat(minorKeys),
+			validKeyCodes = {
+				16: 1, // shift
+				65: 1, // A
+				66: 1, // B
+				67: 1, // C
+				68: 1, // D
+				69: 1, // E
+				70: 1, // F
+				71: 1, // G
+				188: 1, // comma
+				32: 1, // space
+				51: 1, // sharp (#)
+			}
 		;
 
 		return _superclass.subclass ({
@@ -71,31 +91,46 @@ Uize.module ({
 				
 				{
 					'#clear:click':function() { this.set('log', '') }, // clicking clear button DOM node empties out long
+					'#input:keydown':function(e) {
+						if (!(e.keyCode in validKeyCodes)) {
+							e.preventDefault();	
+						}
+					},
 					'#play:click':function() {
 						var
-							children = this.children,
+							m = this,
+							children = m.children,
 							keys = this.getNodeValue('input').split(/\s*,\s*/), // retrieve keys by getting value of text area and splitting it on comma
 							keyNo = -1,
 							playKey = function() {
-								// stop playing previous key
-								previousKeyWidget && previousKeyWidget.unmet('playing');
-								
-								
 								if (++keyNo < keys.length) { // try to play next key
-									var nextKey = keys[keyNo].toLowerCase().replace('#', 'Sharp');
+									var
+										typedKey = keys[keyNo].toLowerCase().replace('#', 'Sharp').replace('b', 'Flat'),
+										nextKey = typedKey in children
+											? typedKey
+											: flatKeyLookup[typedKey]
+									;
 									
 									if (nextKey in children) { // ignore bad tokens
 										var nextKeyWidget = children[nextKey];
 										nextKeyWidget.met('playing');
-										previousKeyWidget = nextKeyWidget;
+										m.previousKeyWidget = nextKeyWidget;
+										m.timeout = setTimeout(
+											function() {
+												// stop playing previous key
+												m.previousKeyWidget && m.previousKeyWidget.unmet('playing');
+												m.timeout = setTimeout(playKey, 200);	
+											},
+											1000
+										);
 									}
 								}
-								else // no more keys so stop
-									clearInterval(interval);
 							},
-							interval = setInterval(playKey, 1000),
 							previousKeyWidget
 						;
+						
+						clearTimeout(m.timeout);
+						m.previousKeyWidget && m.previousKeyWidget.unmet('playing');
 
 						playKey();
 					}
